@@ -2,7 +2,7 @@
 $(function() {
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newdevoured");
+      var newBurger = $(this).data("newdevoured");
   
       var newDevouredState = {
         devoured: newDevoured
@@ -27,7 +27,7 @@ $(function() {
   
       var newBurger = {
         burger_name: $("#ca").val().trim(),
-        devoured: $("[name=sleepy]:checked").val().trim()
+        devoured: $("[name=devoured]:checked").val().trim()
       };
   
       // Send the POST request.
@@ -43,7 +43,7 @@ $(function() {
       );
     });
   
-    $(".delete-cat").on("click", function(event) {
+    $(".delete-burger").on("click", function(event) {
       var id = $(this).data("id");
   
       // Send the DELETE request.
