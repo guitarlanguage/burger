@@ -4,37 +4,15 @@
     </h1>
     <div class="row">
         <div class="col-sm-4">
-            
-            <h2>Add your burger here</h2>
-            <form class="create-form">
-                <div class="form-group">
-                    <label for="ca">burger Name:</label>
-                    <input type="text" id="ca" name="burger_name">
-                </div>
+            <h2>The Proud</h2>
 
-                {{!-- <div class="form-group">
-                    <label for="devoured">devoured?</label>
-
-                    <input type="radio" name="devoured" value="1" checked> devoured!
-
-                    <input type="radio" name="devoured" value="0"> not eaten
-                </div> --}}
-
-                <button type="submit" class="add-burger">Add burger</button>
-            </form>
-
-        </div>
-
-        <div class="col-sm-4">
-            <h2>burgers that are not devoured!</h2>
-
-            <ol>
+            <ol class="proud">
                 {{#each burgers}} {{#unless devoured}}
                 <li>
                     <span class="label">Your Burger!:</span> {{this.burger_name}}
                     <button type="submit" class="eat-burger" data-id="{{this.id}}" name="devoured" value="true">Give in to the mania</button>
                     <p>Or</p>
-                    <button type="submit"class="delete-burger" data-id="{{this.id}}">DELETE</button>
+                    <button type="submit" class="delete-burger" data-id="{{this.id}}">DELETE</button>
                 </li>
 
                 {{/unless}} {{/each}}
@@ -42,18 +20,32 @@
 
         </div>
 
-    <div class="col-sm-4">
-        <h2>burgers that are devoured!</h2>
-        <ol>
-            {{#each burgers}} {{#if devoured }}
-            <p>
-                <span class="label">Your Burger!:</span> {{this.burger_name}}</p>
-                <button type="submit"class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+                <div class="col-sm-4">
 
-            {{/if}} {{/each}}
+            <h2>Add your burger here</h2>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="ca">Burger Name:</label>
+                    <input type="text" id="ca" name="burger_name">
+                </div>
 
-        </ol>
+                <button type="submit" class="add-burger">Add burger</button>
+            </form>
 
         </div>
+
+        <div class="col-sm-4">
+            <h2>The Fallen</h2>
+            <ol>
+                {{#each burgers}} {{#if devoured }}
+                <p>
+                    <span class="label"></span> {{this.burger_name}}</p>
+                <button type="submit" class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+
+                {{/if}} {{/each}}
+
+            </ol>
+
         </div>
-        </div>
+    </div>
+</div>
