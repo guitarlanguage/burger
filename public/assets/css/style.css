@@ -22,6 +22,7 @@ h1 {
 }
 h2 {
     color:#ffc300;
+    font-family: 'Love Ya Like A Sister', cursive;
 }
 p {
     color:#ffc300;
@@ -29,6 +30,10 @@ p {
 }
 .proud {
     margin-top: 0;
+}
+.fallen p{
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 1.3em;
 }
 
 button {
@@ -48,4 +53,9 @@ li {
 input {
     background-color: #FC8A10;
     border: 5px solid #4F871A;
+}
+span {
+    color:#ffc300;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 1.5em;
 }

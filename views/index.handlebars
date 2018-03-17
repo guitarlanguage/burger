@@ -9,7 +9,8 @@
             <ol class="proud">
                 {{#each burgers}} {{#unless devoured}}
                 <li>
-                    <span class="label">Your Burger!:</span> {{this.burger_name}}
+                    <span class="label">{{this.burger_name}}</span> 
+                    <br>
                     <button type="submit" class="eat-burger" data-id="{{this.id}}" name="devoured" value="true">Give in to the mania</button>
                     <p>Or</p>
                     <button type="submit" class="delete-burger" data-id="{{this.id}}">DELETE</button>
@@ -36,7 +37,7 @@
 
         <div class="col-sm-4">
             <h2>The Fallen</h2>
-            <ol>
+            <ol class="fallen">
                 {{#each burgers}} {{#if devoured }}
                 <p>
                     <span class="label"></span> {{this.burger_name}}</p>
